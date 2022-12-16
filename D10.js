@@ -631,6 +631,7 @@ const paintItRed = () => {
 */
 
 //Se abbiamo un input field, tramite questa funzione potremo appendere un nuovo div, al quale daremo la classe "list-item", e appenderemo sotto all'elemento specificato "myList"
+
 const addToList = () => {
   const newListValue = document.getElementById("newList").value;
   if (newListValue === "") {
@@ -648,8 +649,8 @@ const addToList = () => {
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 const emptyMyList = () => {
-  const myListValue = document.getElementById("myList").innerText;
-  myListValue = "";
+  let myListValue = document.getElementById("myList");
+  myListValue.innerText = "";
 };
 
 /* ESERCIZIO 26
