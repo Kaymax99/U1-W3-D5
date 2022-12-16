@@ -610,9 +610,9 @@ const selectTD = () => {
 */
 
 const printTD = () => {
-  const foundTD = document.getElementsByTagName("div");
+  const foundTD = document.getElementsByTagName("td");
   const arrayTD = Array.from(foundTD);
-  arrayTDValue = arrayTD.forEach((div) => console.log(div.innerText));
+  arrayTDValue = arrayTD.forEach((td) => console.log(td.innerText));
   return arrayTDValue;
 };
 
@@ -633,16 +633,9 @@ const paintItRed = () => {
 //Se abbiamo un input field, tramite questa funzione potremo appendere un nuovo div, al quale daremo la classe "list-item", e appenderemo sotto all'elemento specificato "myList"
 
 const addToList = () => {
-  const newListValue = document.getElementById("newList").value;
-  if (newListValue === "") {
-    alert("Please write something in the input field first");
-  } else {
-    const newDiv = document.createElement("div");
-    newDiv.classList.add("list-item");
-    newDiv.innerText = newListValue;
-    document.getElementById("myList").appendChild(newDiv);
-    document.getElementById("newList").value = "";
-  }
+  const newDiv = document.createElement("div");
+  newDiv.innerText = "New item";
+  document.getElementById("myList").appendChild(newDiv);
 };
 
 /* ESERCIZIO 25
@@ -661,7 +654,6 @@ const addClassTR = () => {
   const foundTR = document.getElementsByTagName("tr");
   const arrayTR = Array.from(foundTR);
   arrayTDValue = arrayTR.forEach((tr) => tr.classList.add("test"));
-  return arrayTDValue;
 };
 
 // [EXTRA] JS Avanzato
